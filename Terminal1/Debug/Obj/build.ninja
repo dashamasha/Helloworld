@@ -1,0 +1,28 @@
+#Generating source browse information for project Temp
+
+
+#Abbreviations
+cc = D$:\Games\IAR\common\bin\SourceIndexer.exe
+ll = D$:\Games\IAR\common\bin\PbdLink.exe
+bd = D$:\Games\IAR\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build main.pbi : index main.xcl
+build startupF411RE.pbi : index startupF411RE.xcl
+build Temp.pbd : link main.pbi startupF411RE.pbi
+build Temp.pbw : browsedata Temp.pbd
+
+

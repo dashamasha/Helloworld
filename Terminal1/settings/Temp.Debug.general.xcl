@@ -1,0 +1,15 @@
+"D:\Games\IAR\arm\bin\armproc.dll" 
+
+"D:\Games\IAR\arm\bin\armstlink2.dll" 
+
+"C:\IAR Proj\TRIPLENEW\TempSensor\Debug\Exe\Temp.out" 
+
+--plugin="D:\Games\IAR\arm\bin\armbat.dll" 
+
+--device_macro="D:\Games\IAR\arm\config\debugger\ST\STM32F4xx.dmac" 
+
+--flash_loader="D:\Games\IAR\arm\config\flashloader\ST\FlashSTM32F411xE.board" 
+
+
+
+
